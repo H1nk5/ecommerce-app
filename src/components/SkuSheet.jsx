@@ -16,8 +16,7 @@ export default function SkuSheet() {
     selectSpec,
     quantity,
     setQuantity,
-    addToCart,
-    triggerFly
+    addToCart
   } = useStore();
 
   if (!product) return null;

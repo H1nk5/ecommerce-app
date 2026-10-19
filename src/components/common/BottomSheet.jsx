@@ -2,12 +2,11 @@
 // BottomSheet — 物理阻尼半屏弹窗
 // 支持拖拽关闭、Spring 动画、AnimatePresence 退出
 // ═══════════════════════════════════════════════
-import { useRef, useState } from 'react';
-import { motion, AnimatePresence, useDragControls } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { CloseIcon } from '../icons';
 
 export default function BottomSheet({ isOpen, onClose, title, children }) {
-  const [dragY, setDragY] = useState(0);
   const sheetRef = useRef(null);
 
   const handleDragEnd = (_, info) => {
@@ -15,7 +14,6 @@ export default function BottomSheet({ isOpen, onClose, title, children }) {
     if (info.offset.y > 120 || info.velocity.y > 500) {
       onClose();
     }
-    setDragY(0);
   };
 
   return (

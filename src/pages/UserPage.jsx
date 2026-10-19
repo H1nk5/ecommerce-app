@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { OrderIcon, HeartIcon, CouponIcon, ChevronRightIcon } from '../components/icons';
+import { HeartIcon, CouponIcon, ChevronRightIcon } from '../components/icons';
 
 const menuItems = [
   { icon: '💰', label: '待付款', count: 2 },
